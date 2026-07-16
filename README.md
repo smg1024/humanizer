@@ -4,6 +4,21 @@ A portable agent skill that removes signs of AI-generated writing from text, mak
 
 ## Installation
 
+### Local symlink installer
+
+After cloning the repository, run:
+
+```bash
+./install.sh
+```
+
+The installer links the repository's harness-specific skill directories into
+`~/.claude/skills/humanizer` for Claude Code and `~/.agents/skills/humanizer`
+for Codex. Each harness-specific directory contains a regular copy of the root
+`SKILL.md`, avoiding nested file symlinks. Run `./install.sh --help` for
+single-harness installs, custom destination variables, dry runs, and conflict
+handling.
+
 ### Skills CLI
 
 Install with the cross-agent skills CLI:
